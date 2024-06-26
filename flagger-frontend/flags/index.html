@@ -16,7 +16,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-    <a class="navbar-brand" href="#">Shoonya Flagger</a>
+    <a class="navbar-brand" href="/">Shoonya Flagger</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -44,12 +44,12 @@
       <table class="table table-bordered" id="DataTable">
       <thead>
         <tr>
+          <th>Flag</th>
           <th>Project ID</th>
           <th>Task ID</th>
           <th>Annotator</th>
           <th>Reviewer</th>
           <th>Superchecker</th>
-          <th>Flag</th>
           <th>Role</th>
           <th>Segment</th>
           <th>Time</th>
@@ -125,12 +125,12 @@
           flagDataElement.innerHTML = ''; // Clear existing rows
           data.data.forEach(item => {
             const row = `<tr>
+                          <td>${item.flag}</td>
                           <td>${item.projectID}</td>
                           <td>${item.taskID}</td>
                           <td><a href="/flags?role=annotator&email=${item.annotator}">${item.annotator}</a></td>
                           <td><a href="/flags?role=reviewer&email=${item.reviewer}">${item.reviewer}</a></td>
                           <td><a href="/flags?role=superchecker&email=${item.superchecker}">${item.superchecker}</a></td>
-                          <td>${item.flag}</td>
                           <td>${item.role}</td>
                           <td>${item.segment}</td>
                           <td>${item.time}</td>
