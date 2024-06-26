@@ -119,10 +119,10 @@
 
           // Initialize DataTable after data is loaded
           new DataTable('#DataTable', {
+              order: [[1, 'desc']],
               layout: {
                   topStart: {
-                      buttons: ['pdf', 'print'],
-                      order: [[1, 'desc']]
+                      buttons: ['pdf', 'print']
                   }
               }
           });
