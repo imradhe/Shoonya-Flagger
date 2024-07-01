@@ -117,7 +117,7 @@ chrome.runtime.onInstalled.addListener(() => {
         })
         .catch(error => {
           console.error('Error:', error);
-          alert("An error occurred while submitting the flag.");
+          alert("An error occurred while submitting the flag.\n\n"+error);
         });
       });
     });
